@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>853</width>
-    <height>747</height>
+    <height>773</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -448,6 +448,152 @@
       <width>51</width>
       <height>20</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLimiteHalley">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>710</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Limites de X:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditLimiteEsquerdoHalley">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>710</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLimiteAHalley">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>710</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>a</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditLimiteDireitoHalley">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>710</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonAtualizarLimitesHalley">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>710</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atualizar</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditLimiteDireitoRidders">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>710</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLimiteARidders">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>710</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>a</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonAtualizarLimitesRidders">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>710</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Atualizar</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditLimiteEsquerdoRidders">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>710</y>
+      <width>51</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLimiteRidders">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>710</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Limites de X:</string>
     </property>
    </widget>
   </widget>
