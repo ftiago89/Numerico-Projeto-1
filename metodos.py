@@ -4,7 +4,7 @@ from math import exp, fabs, sin, cos, log
 class MetodosHalleyRidders():
 
     #metodo de Halley
-    def halley(self, f, d1f, d2f, x0=1.0, errto=0.001, imax=100):
+    def halley(self, f, d1f, d2f, x0=1.0, erroLim=0.001, imax=100):
         """
         retorna a raiz de f utilizando o metodo de Halley
         
@@ -12,29 +12,27 @@ class MetodosHalleyRidders():
         * d1f: derivada de f
         * d2f: derivada segunda de f
         * x0: estimativa de ponto incial
-        * errto: erro de uma iteracao para outra
+        * erroLim: erro limite para finalizar o metodo
         * imax: maximo de iteracoes
-    
-        return: the root next x0
     
         """
     
         xn = x0
-        errno = errto + 1
-        iterCount = 0
+        errItr = erroLim + 1
+        iteracoes = 0
         
-        while errno > errto and iterCount < imax:
+        while errItr > erroLim and iteracoes < imax:
             x0 = xn
             xn = xn - (2*f(xn)*d1f(xn))/(2*d1f(xn)*d1f(xn) - f(xn)*d2f(xn))
-            iterCount += 1
+            iteracoes += 1
     
             if xn != 0:
-                errno = fabs((xn-x0)/xn)
+                errItr = fabs((xn-x0)/xn)
     
         return xn
     
     #metodo de Ridders
-    def ridders(self, F, xl, xr, errto=0.001, imax=100):
+    def ridders(self, F, xl, xr, errLim=0.001, imax=100):
          """
          retorna a raiz de f utilizando o método de Ridders
          
@@ -42,14 +40,14 @@ class MetodosHalleyRidders():
          xl: limite esquerdo do intervalo
          xr: limite direito do intervalo
          imax: maximo de iteracoes
-         errto: erro de uma iteracao para outra
+         erroLim: erro limite para finalizar o metodo
     
          """
          x = 0
-         iterCount = 0
-         errno = 1
+         iteracoes = 0
+         erroItr = 1
     
-         while errno > errto and iterCount < imax:          
+         while erroItr > errLim and iteracoes < imax:          
               fr = F(xr)
               fl = F(xl)
               d0 = abs(fr - fl)
@@ -90,21 +88,6 @@ class MetodosHalleyRidders():
                         x = xl
                    break
        
-              errno = abs(xr - xl)
-              iterCount += 1
+              erroItr = abs(xr - xl)
+              iteracoes += 1
          return x
-    
-"""
-if __name__ == "__main__":
-    f = lambda x: exp(-x) + x/5.0 - 1.0
-    d1f = lambda x: -exp(-x)+ 1.0/5.0
-    d2f = lambda x: exp(-x)
-
-    print("Uma raiz se encontra em x = " + (str)(halley(f,d1f,d2f,x0=2)))
-
-    #print("Uma raiz se encontra em x = " + (str)(ridders((lambda x: x*log(x/3) - x), 1.5, 20.2, 1e-14, 500)))
-    
-    #plotGrafico((lambda x: x*np.log(x/3) - x), 1.5, 20.2, 0.001, -5, 5)
-    
-    plotGrafico((lambda x: np.exp(-x) + x/5.0 - 1.0), -5, 10, 0.001, -5, 5)
-"""

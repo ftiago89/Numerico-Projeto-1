@@ -1,0 +1,3 @@
+exp(-x) + x/5.0 - 1.0   (raizes aproximadas = [0.0, 4.96])
+
+(x**3) - 9*x + 3   (raizes aproximadas = [-3.15452301, 2.81691405, 0.33760896]
